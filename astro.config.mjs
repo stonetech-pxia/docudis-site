@@ -2,11 +2,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// Served by GitHub Pages at https://stonetech-pxia.github.io/docudis-site/.
-// The app links to /docudis-site/privacy/, so that path must keep working.
+// Served by GitHub Pages at https://docudis.com/ (custom domain set in the repo's Pages settings).
+// The app links to stonetech-pxia.github.io/docudis-site/privacy/, which GitHub redirects to
+// /privacy/ here, so that path must keep working.
 export default defineConfig({
-	site: 'https://stonetech-pxia.github.io',
-	base: '/docudis-site',
+	site: 'https://docudis.com',
 	integrations: [
 		starlight({
 			title: 'Docudis',
