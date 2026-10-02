@@ -1,0 +1,330 @@
+---
+import Landing from '../layouts/Landing.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Landing
+	title="Docudis: remove personal details before you ask AI"
+	description="Docudis finds names, emails, phone numbers, IBANs and addresses in your documents and replaces them with labels, on your phone, before you send them to an AI."
+>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="15" fill="#C8623A"/>
+    <rect x="19" y="14" width="26" height="36" rx="3.5" fill="#FFFCF8"/>
+    <rect x="23.5" y="20" width="17" height="2.6" rx="1.3" fill="#E3D3C2"/>
+    <rect x="23.5" y="26.5" width="4.5" height="2.6" rx="1.3" fill="#E3D3C2"/>
+    <rect x="29.5" y="25.6" width="11" height="4.4" rx="1.2" fill="#2A2420"/>
+    <rect x="23.5" y="33" width="17" height="2.6" rx="1.3" fill="#E3D3C2"/>
+    <rect x="23.5" y="39.5" width="11" height="2.6" rx="1.3" fill="#E3D3C2"/>
+  </symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M8 12h8"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5Z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Docudis home"><svg aria-hidden="true"><use href="#logo"/></svg>Docudis</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#app">App</a>
+      <a href="#developers">Developers</a>
+      <a href={`${base}/docs/`}>Docs</a>
+    </nav>
+    <div class="nav-right">
+      <a class="icon-btn" href="https://github.com/stonetech-pxia/docudis-core" aria-label="Docudis Core on GitHub"><svg><use href="#i-github"/></svg></a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme"><svg><use href="#i-sun"/></svg></button>
+      <a class="btn btn-primary btn-sm nav-cta" href="#app">Get the app</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <h1>Remove personal details before you ask AI</h1>
+      <div class="hero-side">
+        <p>Docudis finds names, emails, phone numbers, IBANs and addresses in text, PDFs, Word files and photos, and replaces them with labels like <span class="tag-inline">[PERSON_1]</span>.</p>
+        <p>You check the result, send it to your AI, and Docudis swaps the labels back in the reply.</p>
+      </div>
+      <div class="hero-cta">
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#app">Get the app <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#privacy">How your data is handled</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="facts-strip" aria-label="Privacy at a glance">
+      <div><svg><use href="#i-lock"/></svg><p><b>Processed on your phone</b><span>The app has no server. Your documents stay on the device.</span></p></div>
+      <div><svg><use href="#i-check"/></svg><p><b>Kept out of cloud backups</b><span>History and word lists are excluded from backup and device transfer.</span></p></div>
+      <div><svg><use href="#i-code"/></svg><p><b>Open source</b><span>The apps are AGPL-3.0 and the engine is Apache-2.0. Anyone can read the code.</span></p></div>
+      <div><svg><use href="#i-check"/></svg><p><b>No ads, no subscription</b><span>Every feature is free for everyone.</span></p></div>
+    </div>
+  </div>
+
+  <section class="wrap bento" id="features" aria-label="Features">
+    <article class="card span-4">
+      <div class="demo-head">
+        <div>
+          <h3><span class="ico"><svg><use href="#i-scan"/></svg></span>See what gets replaced</h3>
+          <p class="card-text">You see every detection before you share anything, and you can add or remove items by hand.</p>
+        </div>
+        <div class="seg" role="group" aria-label="Document view">
+          <button type="button" id="view-masked" aria-pressed="true">Protected</button>
+          <button type="button" id="view-original" aria-pressed="false">Original</button>
+        </div>
+      </div>
+      <div class="paper masked" id="doc">
+        <div class="paper-meta"><span>INVOICE_MEYER.DOCX</span><span>7 items</span></div>
+        <div class="paper-body">
+          Hi <span class="ent" data-o="Sarah Meyer" data-p="[PERSON_1]"></span>, following our call on 12 March 2026, please find the invoice for €4,200. You can reach me at <span class="ent" data-o="t.laurent@example.com" data-p="[EMAIL_1]"></span> or <span class="ent" data-o="+33 6 12 34 56 78" data-p="[PHONE_1]"></span>. Payment to <span class="ent" data-o="FR76 3000 6000 0112 3456 7890 189" data-p="[IBAN_1]"></span>.<br><br>
+          Best regards,<br>
+          <span class="ent" data-o="Tom Laurent" data-p="[PERSON_2]"></span> · <span class="ent" data-o="Atelier Laurent" data-p="[COMPANY_1]"></span><br>
+          <span class="ent" data-o="14 Rue de Rivoli, 75001 Paris" data-p="[ADDRESS_1]"></span>
+        </div>
+      </div>
+      <div class="status"><span class="dot"><svg><use href="#i-check"/></svg></span><span id="status-text">7 items replaced.</span></div>
+      <p class="note">In this example the date and the amount stay visible.</p>
+    </article>
+
+    <article class="card span-2">
+      <h3><span class="ico"><svg><use href="#i-undo"/></svg></span>Put the details back</h3>
+      <p class="card-text">The label list stays on your phone. Paste the AI's reply and Docudis restores the originals, as long as the reply keeps the labels intact.</p>
+      <div class="map card-body" aria-label="Example label list">
+        <div class="map-row"><span class="ent redacted">[PERSON_1]</span><span>Sarah Meyer</span></div>
+        <div class="map-row"><span class="ent redacted">[EMAIL_1]</span><span>t.laurent@example.com</span></div>
+        <div class="map-row"><span class="ent redacted">[PHONE_1]</span><span>+33 6 12 34 56 78</span></div>
+        <div class="map-row"><span class="ent redacted">[IBAN_1]</span><span>FR76 3000 6000 0112…</span></div>
+        <div class="map-row"><span class="ent redacted">[PERSON_2]</span><span>Tom Laurent</span></div>
+        <div class="map-row"><span class="ent redacted">[COMPANY_1]</span><span>Atelier Laurent</span></div>
+        <div class="map-row"><span class="ent redacted">[ADDRESS_1]</span><span>14 Rue de Rivoli, 75001 Paris</span></div>
+      </div>
+    </article>
+
+    <article class="card span-2">
+      <h3><span class="ico"><svg><use href="#i-globe"/></svg></span>ID numbers from 19 countries</h3>
+      <p class="card-text">National ID, tax and phone formats. For 16 countries the number's check digit is verified too, so random digits are less likely to be flagged.</p>
+      <div class="chips card-body" aria-label="Supported countries">
+        <span class="chip">AT</span><span class="chip">BE</span><span class="chip">CH</span><span class="chip">CN</span><span class="chip">DE</span><span class="chip">DK</span><span class="chip">ES</span><span class="chip">FI</span><span class="chip">FR</span><span class="chip">GB</span><span class="chip">IE</span><span class="chip">IT</span><span class="chip">JP</span><span class="chip">NL</span><span class="chip">NO</span><span class="chip">PL</span><span class="chip">PT</span><span class="chip">SE</span><span class="chip">US</span>
+      </div>
+    </article>
+
+    <article class="card span-2">
+      <h3><span class="ico"><svg><use href="#i-layers"/></svg></span>Your own word lists</h3>
+      <p class="card-text">Add client or project names that should always be hidden, and public names that should always stay visible.</p>
+      <div class="map card-body">
+        <div class="map-row"><span class="chip">Always hide</span><span>Project Falcon</span></div>
+        <div class="map-row"><span class="chip">Always keep</span><span>Paris</span></div>
+      </div>
+    </article>
+
+    <article class="card span-2">
+      <h3><span class="ico"><svg><use href="#i-plug"/></svg></span>Text, PDF, Word, photos</h3>
+      <p class="card-text">Paste text, open a file or take a photo of a paper letter. Share the protected text, or a protected copy of the file.</p>
+      <div class="chips card-body">
+        <span class="chip">.txt</span><span class="chip">.md</span><span class="chip">.csv</span><span class="chip">.pdf</span><span class="chip">.docx</span><span class="chip">.jpg</span><span class="chip">.png</span><span class="chip">.heic</span><span class="chip">camera</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" id="privacy">
+    <div class="wrap">
+      <div class="eyebrow">Privacy</div>
+      <h2>How your data is handled</h2>
+      <p class="lede">Each line below describes what the app does today. If something changes, this page changes with it.</p>
+      <dl class="spec">
+        <div class="spec-row"><dt>Your documents</dt><dd><b>Read and processed on your phone.</b> The app has no Docudis server to send them to.</dd></div>
+        <div class="spec-row"><dt>Detection</dt><dd>Docudis rules, a name-recognition model that ships inside the app, and Google ML Kit entity extraction, all running on the device.</dd></div>
+        <div class="spec-row"><dt>Network</dt><dd>The app itself sends nothing. Google ML Kit, which runs through Google Play services, <b>downloads its entity-extraction model on first use</b> and sends Google diagnostic and usage information such as device model, OS and app version, performance metrics, error codes and a per-installation identifier. <b>It does not send your text or images.</b><small>See Google's <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.</small></dd></div>
+        <div class="spec-row"><dt>History and labels</dt><dd>Your latest 100 documents are kept in the app's private storage; older ones are deleted automatically. <b>Excluded from cloud backups and device transfer.</b> Delete one item, or everything with "Clear data on this device", at any time.</dd></div>
+        <div class="spec-row"><dt>Ads and tracking</dt><dd>No ads, no advertising identifiers and no analytics of our own. No account or sign-in.</dd></div>
+        <div class="spec-row"><dt>Source code</dt><dd><b>All open source.</b> The Android and desktop apps are licensed under AGPL-3.0: <a href="https://github.com/stonetech-pxia/docudis-android">docudis-android</a>, <a href="https://github.com/stonetech-pxia/docudis-desktop">docudis-desktop</a>. The detection engine and all rule packs are licensed under Apache-2.0: <a href="https://github.com/stonetech-pxia/docudis-core">docudis-core</a>.<small>You can check every line above against the code.</small></dd></div>
+        <div class="spec-row"><dt>Who makes it</dt><dd><span class="todo">COMPANY, COUNTRY</span> · Contact: stonetechdigital@gmail.com · <a href={`${base}/privacy/`}>Full privacy policy</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="limits">
+    <div class="wrap">
+      <div class="eyebrow">Limits</div>
+      <h2>What Docudis can't do</h2>
+      <ul class="limits">
+        <li><b>It can miss things</b><span>No automatic detection finds every personal detail. Read the protected copy before you send it.</span></li>
+        <li><b>It hides details, not meaning</b><span>A diagnosis, a job title or a story can still point to a person. Docudis replaces identifiers such as names and numbers.</span></li>
+        <li><b>Labels must survive the reply</b><span>Restoring works when the AI keeps labels like [PERSON_1] unchanged. If it rewrites them, those spots stay as labels.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="app">
+    <div class="wrap">
+      <div class="app-head">
+        <div>
+          <div class="eyebrow">The app</div>
+          <h2>Free on Android and iOS</h2>
+          <p class="lede">No account and no subscription. Available in English, Español, Français and 中文.</p>
+        </div>
+        <div class="store-row">
+          <a class="btn btn-primary" href="#app">Google Play</a>
+          <a class="btn btn-ghost" href="#app">App Store</a>
+        </div>
+      </div>
+      <ol class="shots">
+        <li><div class="shot"><img src={`${base}/img/2-paste.jpg`} alt="Docudis home screen with pasted invoice text and an Anonymize button" width="540" height="960"></div><p><span>1</span>Paste text, open a file or scan a photo</p></li>
+        <li><div class="shot"><img src={`${base}/img/1-result.jpg`} alt="Protected copy with 7 items replaced by labels" width="540" height="960"></div><p><span>2</span>Check every item that was replaced</p></li>
+        <li><div class="shot"><img src={`${base}/img/3-send.jpg`} alt="Sheet listing AI apps to send the protected copy to" width="540" height="960"></div><p><span>3</span>Send the protected copy to your AI app</p></li>
+      </ol>
+      <p class="swipe-hint">Swipe for more →</p>
+    </div>
+  </section>
+
+  <section class="section" id="developers">
+    <div class="wrap dev-grid">
+      <div>
+        <div class="eyebrow">For developers</div>
+        <h2>Use the detection engine in your own software</h2>
+        <p class="lede">Docudis Core is a Rust library with a C interface. A Dart binding is included, and any language that can call C can use it.</p>
+        <ul class="facts">
+          <li><span class="ico"><svg><use href="#i-code"/></svg></span><div><b>A versioned interface</b><span><code>docudis_v1_*</code> functions and <code>schema_version: 1</code> JSON keep their behavior. Breaking changes get a new version namespace.</span></div></li>
+          <li><span class="ico"><svg><use href="#i-flask"/></svg></span><div><b>Shared test fixtures</b><span>Every binding is tested against the same conformance cases.</span></div></li>
+          <li><span class="ico"><svg><use href="#i-lock"/></svg></span><div><b>Core has no network code</b><span>It only looks at the text you pass in. OCR, PDF parsing and ML models live outside Core.</span></div></li>
+          <li><span class="ico"><svg><use href="#i-layers"/></svg></span><div><b>Builds for</b><span>Android, macOS, Linux, Windows and WebAssembly.</span></div></li>
+        </ul>
+      </div>
+      <div class="term">
+        <div class="term-tabs" role="tablist" aria-label="Code examples">
+          <button type="button" role="tab" id="tab-cli" aria-selected="true" aria-controls="pane-cli">CLI</button>
+          <button type="button" role="tab" id="tab-c" aria-selected="false" aria-controls="pane-c">C</button>
+          <button type="button" role="tab" id="tab-json" aria-selected="false" aria-controls="pane-json">JSON response</button>
+        </div>
+<pre role="tabpanel" id="pane-cli" aria-labelledby="tab-cli"><span class="d">$</span> docudis --regions fr \
+  <span class="s">"Email claire.martin@example.fr</span>
+<span class="s">   or call +33 6 12 34 56 78."</span>
+
+Email <span class="k">[EMAIL_1]</span>
+or call <span class="k">[PHONE_1]</span>.</pre>
+<pre role="tabpanel" id="pane-c" aria-labelledby="tab-c" hidden><span class="k">#include</span> <span class="s">"docudis.h"</span>
+
+<span class="k">const char</span> *req =
+  <span class="s">"&#123;\"schema_version\":1,\"text\":\"...\","</span>
+  <span class="s">"\"regions\":[\"fr\"]&#125;"</span>;
+
+DocudisV1Buffer out = &#123;0&#125;;
+<span class="k">if</span> (docudis_v1_detect_json(
+      (<span class="k">const</span> uint8_t *)req, strlen(req),
+      &amp;out) == DOCUDIS_V1_OK) &#123;
+  fwrite(out.ptr, 1, out.len, stdout);
+&#125;
+docudis_v1_buffer_free(&amp;out);</pre>
+<pre role="tabpanel" id="pane-json" aria-labelledby="tab-json" hidden>&#123;
+  <span class="k">"schema_version"</span>: 1,
+  <span class="k">"detections"</span>: [&#123;
+    <span class="k">"type"</span>: <span class="s">"EMAIL"</span>,
+    <span class="k">"value"</span>: <span class="s">"claire.martin@example.fr"</span>,
+    <span class="k">"start"</span>: 6, <span class="k">"end"</span>: 30,
+    <span class="k">"confidence"</span>: 0.95,
+    <span class="k">"detector"</span>: <span class="s">"regex:universal:email"</span>,
+    <span class="k">"source"</span>: <span class="s">"strongRule"</span>
+  &#125;, <span class="d">…</span>]
+&#125;</pre>
+        <div class="term-foot"><a href={`${base}/docs/core/`}>Read the Core docs →</a><button type="button" id="copy-btn">Copy</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Try it on your next document</h2>
+        <p>Paste an email, open a PDF or take a photo of a letter.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="#app">Get the app</a>
+        <a class="btn btn-ghost" href="https://github.com/stonetech-pxia/docudis-android">Read the source</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><svg aria-hidden="true"><use href="#logo"/></svg>Docudis</a>
+        <p>Replace personal details before you share a document.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="#app">Android</a></li><li><a href="#app">iOS</a></li><li><a href="#features">Features</a></li></ul></div>
+      <div><h4>Trust</h4><ul><li><a href="#privacy">How data is handled</a></li><li><a href="#limits">Limits</a></li><li><a href={`${base}/privacy/`}>Privacy policy</a></li></ul></div>
+      <div><h4>Docs</h4><ul><li><a href={`${base}/docs/`}>Overview</a></li><li><a href={`${base}/docs/core/`}>Docudis Core</a></li><li><a href={`${base}/docs/core/c-abi/`}>C interface</a></li></ul></div>
+      <div><h4>Source code</h4><ul><li><a href="https://github.com/stonetech-pxia/docudis-android">Android app</a></li><li><a href="https://github.com/stonetech-pxia/docudis-desktop">Desktop app</a></li><li><a href="https://github.com/stonetech-pxia/docudis-core">Docudis Core</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 the Docudis contributors</span><span>Apps: AGPL-3.0 · Docudis Core: Apache-2.0</span></div>
+  </div>
+</footer>
+
+</Landing>
+
+<script>
+(() => {
+  // Demo: switch between anonymized and original text
+  const doc = document.getElementById('doc');
+  const ents = doc.querySelectorAll('.ent');
+  const masked = document.getElementById('view-masked');
+  const original = document.getElementById('view-original');
+  const status = document.getElementById('status-text');
+  function render(showMasked) {
+    ents.forEach(e => { e.textContent = showMasked ? e.dataset.p : e.dataset.o; });
+    doc.classList.toggle('masked', showMasked);
+    masked.setAttribute('aria-pressed', String(showMasked));
+    original.setAttribute('aria-pressed', String(!showMasked));
+    status.textContent = showMasked ? '7 items replaced.' : '7 items found. Only you see this view.';
+  }
+  masked.addEventListener('click', () => render(true));
+  original.addEventListener('click', () => render(false));
+  render(true);
+
+  // Code tabs
+  const tabs = document.querySelectorAll('.term-tabs [role="tab"]');
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }));
+
+  // Copy the visible code sample
+  const copyBtn = document.getElementById('copy-btn');
+  copyBtn.addEventListener('click', () => {
+    const pane = document.querySelector('.term pre:not([hidden])');
+    const done = () => { copyBtn.textContent = 'Copied'; setTimeout(() => copyBtn.textContent = 'Copy', 1500); };
+    navigator.clipboard.writeText(pane.innerText).then(done, () => {
+      const r = document.createRange(); r.selectNodeContents(pane);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+
+  // Theme toggle: flips the current effective theme and remembers it for the docs too
+  const root = document.documentElement;
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    const next = dark ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('starlight-theme', next); } catch {}
+  });
+})();
+</script>

@@ -1,0 +1,46 @@
+/* Docs theme: Clay palette (docudis-android/design/README.md) mapped onto Starlight's variables.
+   Fonts are self-hosted so visiting the site sends nothing to a font CDN. */
+@import '@fontsource-variable/sora';
+@import '@fontsource-variable/karla';
+
+:root {
+	--sl-font: 'Karla Variable', 'Helvetica Neue', 'Segoe UI', system-ui, sans-serif;
+	--sl-font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Roboto Mono', monospace;
+
+	/* Dark theme (Starlight's default) */
+	--sl-color-accent-low: #43271b;
+	--sl-color-accent: #e07a50;
+	--sl-color-accent-high: #f4b9a0;
+	--sl-color-white: #f2eae1;
+	--sl-color-gray-1: #e4d9cd;
+	--sl-color-gray-2: #c0b2a4;
+	--sl-color-gray-3: #9f907f;
+	--sl-color-gray-4: #6b5f55;
+	--sl-color-gray-5: #4a4038;
+	--sl-color-gray-6: #2c2621;
+	--sl-color-black: #14110f;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #f6ded5;
+	--sl-color-accent: #a84e2c;
+	--sl-color-accent-high: #6e3018;
+	--sl-color-white: #2a2420;
+	--sl-color-gray-1: #3d3530;
+	--sl-color-gray-2: #574c44;
+	--sl-color-gray-3: #6b5f55;
+	--sl-color-gray-4: #8a7b6f;
+	--sl-color-gray-5: #c9bbac;
+	--sl-color-gray-6: #efe6dc;
+	--sl-color-gray-7: #f7f2ec;
+	--sl-color-black: #f5efe8;
+}
+
+h1,
+h2,
+h3,
+h4,
+.site-title {
+	font-family: 'Sora Variable', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+	letter-spacing: -0.01em;
+}
