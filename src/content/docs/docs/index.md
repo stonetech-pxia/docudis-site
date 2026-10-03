@@ -30,6 +30,7 @@ Everything is open source.
 | [docudis-desktop](https://github.com/stonetech-pxia/docudis-desktop) | The Windows and macOS app | AGPL-3.0 |
 | [docudis-core](https://github.com/stonetech-pxia/docudis-core) | Rules, word lists, merging, replacement and restoration, with a C interface | Apache-2.0 |
 | [docudis-ner](https://github.com/stonetech-pxia/docudis-ner) | Running name-recognition models | Apache-2.0 |
+| [docudis-ner-xlmr](https://huggingface.co/leonx1995/docudis-ner-xlmr) | The name-recognition model the apps ship | AFL-3.0 |
 
 Dependencies point one way: docudis-ner depends on Core, and the apps depend on both.
 

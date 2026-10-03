@@ -43,6 +43,10 @@ See Google's [ML Kit data disclosure](https://developers.google.com/ml-kit/andro
 - No analytics of our own.
 - Your content is never sold and never used to train models.
 
+## This website
+
+docudis.com is a static site hosted on GitHub Pages. It sets no cookies and runs no analytics, and it loads nothing from other companies' servers: fonts and search are served by the site itself. GitHub, as the host, receives your IP address with each request; see the [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). If you switch between light and dark mode, your browser remembers the choice in its local storage.
+
 ## Contact
 
-stonetechdigital@gmail.com
+Docudis is published by stonetech, France. Contact: stonetechdigital@gmail.com

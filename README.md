@@ -7,7 +7,14 @@ The Docudis website, built with [Astro](https://astro.build) and [Starlight](htt
 - `public/privacy/index.html`: the privacy policy. The app links to `stonetech-pxia.github.io/docudis-site/privacy/`, which GitHub redirects to `docudis.com/privacy/`, so this path must keep working. Source of truth: `docs/store/privacy-policy/index.html` in [docudis-android](https://github.com/stonetech-pxia/docudis-android); copy it here to update.
 - `public/CNAME`: the custom domain.
 
+- `src/content/docs/docs/licenses.mdx`: the licenses of the third-party code and fonts the site ships, written by `scripts/generate-licenses.mjs`. Run it after changing dependencies.
+- `public/fonts/`: the fonts the privacy policy loads, so it makes no third-party requests.
+
 Every privacy statement on the site must match what the apps actually do. Check the app source before changing one.
+
+## License
+
+The site's code and text are licensed under the [Apache License 2.0](LICENSE), Copyright 2026 stonetech. The Docudis name and logo, the app screenshots in `public/img/` (which show third-party trademarks), and the privacy policy are not covered by that license. Third-party components keep their own licenses, listed on the site's open-source licenses page.
 
 ## Develop
 

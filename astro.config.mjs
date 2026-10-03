@@ -23,6 +23,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', slug: 'docs' },
 						{ label: 'How your data is handled', slug: 'docs/privacy' },
+						{ label: 'Open-source licenses', slug: 'docs/licenses' },
 					],
 				},
 				{
