@@ -14,7 +14,7 @@ Every privacy statement on the site must match what the apps actually do. Check 
 
 ## License
 
-The site's code and text are licensed under the [Apache License 2.0](LICENSE), Copyright 2026 stonetech. The Docudis name and logo, the app screenshots in `public/img/` (which show third-party trademarks), and the privacy policy are not covered by that license. Third-party components keep their own licenses, listed on the site's open-source licenses page.
+The site's code and text are licensed under the [Apache License 2.0](LICENSE), Copyright 2026 Pengda Xia (stonetech). The Docudis name and logo, the app screenshots in `public/img/` (which show third-party trademarks), and the privacy policy are not covered by that license. Third-party components keep their own licenses, listed on the site's open-source licenses page.
 
 ## Develop
 

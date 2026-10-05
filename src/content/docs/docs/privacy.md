@@ -49,4 +49,4 @@ docudis.com is a static site hosted on GitHub Pages. It sets no cookies and runs
 
 ## Contact
 
-Docudis is published by stonetech, France. Contact: stonetechdigital@gmail.com
+Docudis is published by Pengda Xia (stonetech), France. Contact: stonetechdigital@gmail.com
