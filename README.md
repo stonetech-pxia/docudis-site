@@ -5,6 +5,7 @@ The Docudis website, built with [Astro](https://astro.build) and [Starlight](htt
 - `src/pages/index.astro`: the home page. Styles are in `src/styles/landing.css`.
 - `src/content/docs/docs/`: documentation pages, served under `/docs/`.
 - `public/privacy/index.html`: the privacy policy. The app links to `stonetech-pxia.github.io/docudis-site/privacy/`, which GitHub redirects to `docudis.com/privacy/`, so this path must keep working. Source of truth: `docs/store/privacy-policy/index.html` in [docudis-android](https://github.com/stonetech-pxia/docudis-android); copy it here to update.
+- `public/privacy/ios/index.html` and `public/privacy/desktop/index.html`: the privacy policies of the iPhone app and of the Windows and macOS app, maintained here.
 - `public/CNAME`: the custom domain.
 
 - `src/content/docs/docs/licenses.mdx`: the licenses of the third-party code and fonts the site ships, written by `scripts/generate-licenses.mjs`. Run it after changing dependencies.

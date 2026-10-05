@@ -70,7 +70,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <div class="wrap">
     <div class="facts-strip" aria-label="Privacy at a glance">
       <div><svg><use href="#i-lock"/></svg><p><b>Processed on your phone</b><span>The app has no server. Your documents stay on the device.</span></p></div>
-      <div><svg><use href="#i-check"/></svg><p><b>Kept out of cloud backups</b><span>History and word lists are excluded from backup and device transfer.</span></p></div>
+      <div><svg><use href="#i-check"/></svg><p><b>Cleared in one tap</b><span>Your latest 100 documents stay on the device until you clear them.</span></p></div>
       <div><svg><use href="#i-code"/></svg><p><b>Open source</b><span>The apps are AGPL-3.0 and the engine is Apache-2.0. Anyone can read the code.</span></p></div>
       <div><svg><use href="#i-check"/></svg><p><b>No ads, no subscription</b><span>Every feature is free for everyone.</span></p></div>
     </div>
@@ -150,10 +150,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="spec-row"><dt>Your documents</dt><dd><b>Read and processed on your phone.</b> The app has no Docudis server to send them to.</dd></div>
         <div class="spec-row"><dt>Detection</dt><dd>Docudis rules, a name-recognition model that ships inside the app, and Google ML Kit entity extraction, all running on the device.</dd></div>
         <div class="spec-row"><dt>Network</dt><dd>The app itself sends nothing. Google ML Kit, which runs through Google Play services, <b>downloads its entity-extraction model on first use</b> and sends Google diagnostic and usage information such as device model, OS and app version, performance metrics, error codes and a per-installation identifier. <b>It does not send your text or images.</b><small>See Google's <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.</small></dd></div>
-        <div class="spec-row"><dt>History and labels</dt><dd>Your latest 100 documents are kept in the app's private storage; older ones are deleted automatically. <b>Excluded from cloud backups and device transfer.</b> Delete one item, or everything with "Clear data on this device", at any time.</dd></div>
+        <div class="spec-row"><dt>History and labels</dt><dd>Your latest 100 documents are kept in the app's private storage; older ones are deleted automatically. <b>On Android, excluded from cloud backups and device transfer</b>; on iPhone, part of the device's backups like other app data. Delete one item, or everything with "Clear data on this device", at any time.</dd></div>
         <div class="spec-row"><dt>Ads and tracking</dt><dd>No ads, no advertising identifiers and no analytics of our own. No account or sign-in.</dd></div>
         <div class="spec-row"><dt>Source code</dt><dd><b>All open source.</b> The Android and desktop apps are licensed under AGPL-3.0: <a href="https://github.com/stonetech-pxia/docudis-android">docudis-android</a>, <a href="https://github.com/stonetech-pxia/docudis-desktop">docudis-desktop</a>. The detection engine and all rule packs are licensed under Apache-2.0: <a href="https://github.com/stonetech-pxia/docudis-core">docudis-core</a>. The name-recognition model is licensed under AFL-3.0: <a href="https://huggingface.co/leonx1995/docudis-ner-xlmr">docudis-ner-xlmr</a>.<small>You can check every line above against the code.</small></dd></div>
-        <div class="spec-row"><dt>Who makes it</dt><dd>Pengda Xia (stonetech), France · Contact: stonetechdigital@gmail.com · Privacy policy: <a href={`${base}/privacy/`}>Android</a>, <a href={`${base}/privacy/desktop/`}>Windows and macOS</a></dd></div>
+        <div class="spec-row"><dt>Who makes it</dt><dd>Pengda Xia (stonetech), France · Contact: stonetechdigital@gmail.com · Privacy policy: <a href={`${base}/privacy/`}>Android</a>, <a href={`${base}/privacy/ios/`}>iPhone</a>, <a href={`${base}/privacy/desktop/`}>Windows and macOS</a></dd></div>
       </dl>
     </div>
   </section>
@@ -175,14 +175,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="app-head">
         <div>
           <div class="eyebrow">The app</div>
-          <h2>Free on Android and iOS</h2>
+          <h2>Free on Windows, Android and iPhone</h2>
           <p class="lede">No account and no subscription. Available in English, Español, Français and 中文.</p>
         </div>
         <div class="store-row">
-          <a class="btn btn-primary" href="#app">Google Play</a>
-          <a class="btn btn-ghost" href="#app">App Store</a>
+          <a class="btn btn-primary" href="https://github.com/stonetech-pxia/docudis-desktop/releases/latest">Download for Windows <svg><use href="#i-arrow"/></svg></a>
+          <span class="btn btn-ghost btn-soon" aria-disabled="true">Google Play · coming soon</span>
+          <span class="btn btn-ghost btn-soon" aria-disabled="true">App Store · coming soon</span>
         </div>
       </div>
+      <p class="dl-note"><b>Windows 10 and 11 (x64):</b> unpack the zip and run <code>docudis.exe</code>, with no installation and no administrator rights. Check the SHA-256 shown on the <a href="https://github.com/stonetech-pxia/docudis-desktop/releases/latest">release page</a>. The app is not code signed yet, so Windows may warn you the first time: choose “More info”, then “Run anyway”. The Windows app never connects to the internet; see its <a href={`${base}/privacy/desktop/`}>privacy policy</a>. The Mac version can be <a href="https://github.com/stonetech-pxia/docudis-desktop#build-from-source">built from source</a> for now.</p>
       <ol class="shots">
         <li><div class="shot"><img src={`${base}/img/2-paste.jpg`} alt="Docudis home screen with pasted invoice text and an Anonymize button" width="540" height="960"></div><p><span>1</span>Paste text, open a file or scan a photo</p></li>
         <li><div class="shot"><img src={`${base}/img/1-result.jpg`} alt="Protected copy with 7 items replaced by labels" width="540" height="960"></div><p><span>2</span>Check every item that was replaced</p></li>
@@ -267,7 +269,7 @@ docudis_v1_buffer_free(&amp;out);</pre>
         <a class="brand" href="#top"><svg aria-hidden="true"><use href="#logo"/></svg>Docudis</a>
         <p>Replace personal details before you share a document.</p>
       </div>
-      <div><h4>Product</h4><ul><li><a href="#app">Android</a></li><li><a href="#app">iOS</a></li><li><a href="#features">Features</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="https://github.com/stonetech-pxia/docudis-desktop/releases/latest">Windows</a></li><li><a href="#app">Android</a></li><li><a href="#app">iOS</a></li><li><a href="#features">Features</a></li></ul></div>
       <div><h4>Trust</h4><ul><li><a href="#privacy">How data is handled</a></li><li><a href="#limits">Limits</a></li><li><a href={`${base}/privacy/`}>Privacy policy</a></li><li><a href={`${base}/docs/licenses/`}>Open-source licenses</a></li></ul></div>
       <div><h4>Docs</h4><ul><li><a href={`${base}/docs/`}>Overview</a></li><li><a href={`${base}/docs/core/`}>Docudis Core</a></li><li><a href={`${base}/docs/core/c-abi/`}>C interface</a></li></ul></div>
       <div><h4>Source code</h4><ul><li><a href="https://github.com/stonetech-pxia/docudis-android">Android app</a></li><li><a href="https://github.com/stonetech-pxia/docudis-desktop">Desktop app</a></li><li><a href="https://github.com/stonetech-pxia/docudis-core">Docudis Core</a></li></ul></div>
