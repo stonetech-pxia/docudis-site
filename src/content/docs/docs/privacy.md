@@ -3,7 +3,7 @@ title: How your data is handled
 description: What stays on your phone, what goes online, and how to delete your data.
 ---
 
-This page describes what the Docudis Android app does today. The [privacy policy](../../privacy/) is the legal version of the same information. You can check every point against the [source code](https://github.com/stonetech-pxia/docudis-android).
+This page describes what the Docudis Android app does today. The [privacy policy](../../privacy/) is the legal version of the same information. You can check every point against the [source code](https://github.com/stonetech-pxia/docudis-android). The desktop app for Windows and macOS never connects to the internet and has [its own privacy policy](../../privacy/desktop/).
 
 ## Your documents
 
